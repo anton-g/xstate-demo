@@ -8,13 +8,13 @@ export function Quiz() {
 
   return (
     <div>
-      <div>
+      <p>
         {isIntro && 'Quiz is playing intro'}
         {isIdle && 'Quiz is idle'}
         {isBuzzed && 'Quiz is buzzed!'}
         {isEnded && 'Quiz is ended'}
-      </div>
-      <div style={{ marginTop: 16 }}>
+      </p>
+      <div>
         <button
           disabled={!isIntro}
           onClick={() => {
