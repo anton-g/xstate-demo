@@ -13,7 +13,7 @@ export function Quiz2() {
       </div>
       <div style={{ marginTop: 16 }}>
         <button
-          // disabled={state !== "intro"}
+          disabled={state !== 'intro'}
           onClick={() => {
             setState('idle')
           }}
@@ -21,7 +21,7 @@ export function Quiz2() {
           start
         </button>
         <button
-          // disabled={state !== "idle"}
+          disabled={state !== 'idle'}
           onClick={() => {
             setState('buzzed')
           }}
@@ -29,7 +29,7 @@ export function Quiz2() {
           buzz
         </button>
         <button
-          // disabled={state !== "buzzed"}
+          disabled={state !== 'buzzed'}
           onClick={() => {
             setState('idle')
           }}
