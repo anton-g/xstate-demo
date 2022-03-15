@@ -1,7 +1,7 @@
-import "./App.css";
-import { Quiz } from "./Quiz";
-import { Quiz2 } from "./Quiz2";
-import { Quiz3 } from "./Quiz3";
+import './App.css'
+import { Quiz } from './Quiz'
+import { Quiz2 } from './Quiz2'
+import { Quiz3 } from './Quiz3'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       {/* <Quiz2 /> */}
       {/* <Quiz3 /> */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

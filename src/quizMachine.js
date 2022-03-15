@@ -1,27 +1,25 @@
-import { createMachine } from "xstate";
+import { createMachine } from 'xstate'
 
 export const quizMachine = createMachine({
-  id: "Quiz",
-  initial: "intro",
+  id: 'buzzer',
+  initial: 'intro',
   states: {
     intro: {
       on: {
-        START: "idle",
+        START: 'idle',
       },
     },
     idle: {
       on: {
-        BUZZ: "buzzed",
+        BUZZ: 'buzzed',
       },
     },
     buzzed: {
       on: {
-        INCORRECT: "idle",
-        CORRECT: "ended",
+        INCORRECT: 'idle',
+        CORRECT: 'ended',
       },
     },
-    ended: {
-      final: true,
-    },
+    ended: {},
   },
-});
+})
