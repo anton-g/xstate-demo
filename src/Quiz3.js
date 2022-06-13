@@ -7,46 +7,27 @@ export function Quiz3() {
   return (
     <main>
       <h1>Game show buzzer 3</h1>
-      <div style={{ marginTop: 16 }}>
-        <button
-          disabled={!state.can('START')}
-          onClick={() => {
-            send('START')
-          }}
-        >
+      <div>
+        <button onClick={() => send('START')} disabled={!state.can('START')}>
           start
         </button>
-        <button
-          disabled={!state.can('BUZZ')}
-          onClick={() => {
-            send('BUZZ')
-          }}
-        >
+        <button onClick={() => send('BUZZ')} disabled={!state.can('BUZZ')}>
           buzz
         </button>
         <button
+          onClick={() => send('INCORRECT')}
           disabled={!state.can('INCORRECT')}
-          onClick={() => {
-            send('INCORRECT')
-          }}
         >
           incorrect
         </button>
         <button
+          onClick={() => send('CORRECT')}
           disabled={!state.can('CORRECT')}
-          onClick={() => {
-            send('CORRECT')
-          }}
         >
           correct
         </button>
       </div>
-      <p>
-        {state.matches('intro') && 'intro'}
-        {state.matches('idle') && 'idle'}
-        {state.matches('buzzed') && 'buzzed!'}
-        {state.matches('ended') && 'ended'}
-      </p>
+      <p>{state.value}</p>
     </main>
   )
 }
