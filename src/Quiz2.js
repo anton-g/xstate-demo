@@ -42,12 +42,7 @@ export function Quiz2() {
           correct
         </button>
       </div>
-      <p>
-        {state === 'intro' && 'intro'}
-        {state === 'idle' && 'idle'}
-        {state === 'buzzed' && 'buzzed'}
-        {state === 'ended' && 'ended'}
-      </p>
+      <p>{state}</p>
     </main>
   )
 }
