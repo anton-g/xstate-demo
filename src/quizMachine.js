@@ -6,18 +6,26 @@ export const quizMachine = createMachine({
   states: {
     intro: {
       on: {
-        START: 'idle',
+        START: {
+          target: 'idle',
+        },
       },
     },
     idle: {
       on: {
-        BUZZ: 'buzzed',
+        BUZZ: {
+          target: 'buzzed',
+        },
       },
     },
     buzzed: {
       on: {
-        INCORRECT: 'idle',
-        CORRECT: 'ended',
+        INCORRECT: {
+          target: 'idle',
+        },
+        CORRECT: {
+          target: 'ended',
+        },
       },
     },
     ended: {},
