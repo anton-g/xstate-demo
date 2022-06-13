@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { trackAnalytics } from './analytics'
 
 export function Quiz() {
   const [isIntro, setIsIntro] = useState(true)
@@ -42,6 +43,7 @@ export function Quiz() {
           onClick={() => {
             setIsBuzzed(false)
             setIsEnded(true)
+            trackAnalytics('game ended')
           }}
         >
           correct

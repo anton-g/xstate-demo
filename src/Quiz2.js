@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { trackAnalytics } from './analytics'
 
 export function Quiz2() {
   const [state, setState] = useState('intro')
@@ -35,6 +36,7 @@ export function Quiz2() {
           disabled={state !== 'buzzed'}
           onClick={() => {
             setState('ended')
+            trackAnalytics('game ended')
           }}
         >
           correct

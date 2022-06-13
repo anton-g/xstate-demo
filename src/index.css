@@ -98,10 +98,6 @@ button:after {
   z-index: -1;
 }
 
-button:active:after {
-  bottom: 0;
-}
-
 button:main,
 button:focus {
   user-select: auto;

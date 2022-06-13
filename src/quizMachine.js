@@ -1,4 +1,5 @@
 import { createMachine } from 'xstate'
+import { trackAnalytics } from './analytics'
 
 export const quizMachine = createMachine({
   id: 'buzzer',
@@ -28,6 +29,8 @@ export const quizMachine = createMachine({
         },
       },
     },
-    ended: {},
+    ended: {
+      entry: () => trackAnalytics('game ended'),
+    },
   },
 })
