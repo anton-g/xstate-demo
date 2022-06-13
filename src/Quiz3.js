@@ -5,13 +5,8 @@ export function Quiz3() {
   const [state, send] = useMachine(quizMachine)
 
   return (
-    <div>
-      <div>
-        {state.matches('intro') && 'Quiz3 is playing intro'}
-        {state.matches('idle') && 'Quiz3 is idle'}
-        {state.matches('buzzed') && 'Quiz3 is buzzed!'}
-        {state.matches('ended') && 'Quiz3 is ended'}
-      </div>
+    <main>
+      <h1>Game show buzzer 3</h1>
       <div style={{ marginTop: 16 }}>
         <button
           disabled={!state.can('START')}
@@ -46,6 +41,12 @@ export function Quiz3() {
           correct
         </button>
       </div>
-    </div>
+      <p>
+        {state.matches('intro') && 'intro'}
+        {state.matches('idle') && 'idle'}
+        {state.matches('buzzed') && 'buzzed!'}
+        {state.matches('ended') && 'ended'}
+      </p>
+    </main>
   )
 }

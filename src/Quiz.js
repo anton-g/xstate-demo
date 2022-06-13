@@ -7,13 +7,8 @@ export function Quiz() {
   const [isEnded, setIsEnded] = useState(false)
 
   return (
-    <div>
-      <p>
-        {isIntro && 'Quiz is playing intro'}
-        {isIdle && 'Quiz is idle'}
-        {isBuzzed && 'Quiz is buzzed!'}
-        {isEnded && 'Quiz is ended'}
-      </p>
+    <main>
+      <h1>Game show buzzer 1</h1>
       <div>
         <button
           disabled={!isIntro}
@@ -52,6 +47,12 @@ export function Quiz() {
           correct
         </button>
       </div>
-    </div>
+      <p>
+        {isIntro && 'intro'}
+        {isIdle && 'idle'}
+        {isBuzzed && 'buzzed'}
+        {isEnded && 'ended'}
+      </p>
+    </main>
   )
 }

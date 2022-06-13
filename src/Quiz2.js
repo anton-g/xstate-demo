@@ -4,14 +4,9 @@ export function Quiz2() {
   const [state, setState] = useState('intro')
 
   return (
-    <div>
+    <main>
+      <h1>Game show buzzer 2</h1>
       <div>
-        {state === 'intro' && 'Quiz2 is playing intro'}
-        {state === 'idle' && 'Quiz2 is idle'}
-        {state === 'buzzed' && 'Quiz2 is buzzed!'}
-        {state === 'ended' && 'Quiz2 is ended'}
-      </div>
-      <div style={{ marginTop: 16 }}>
         <button
           disabled={state !== 'intro'}
           onClick={() => {
@@ -45,6 +40,12 @@ export function Quiz2() {
           correct
         </button>
       </div>
-    </div>
+      <p>
+        {state === 'intro' && 'intro'}
+        {state === 'idle' && 'idle'}
+        {state === 'buzzed' && 'buzzed'}
+        {state === 'ended' && 'ended'}
+      </p>
+    </main>
   )
 }
